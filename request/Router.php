@@ -434,9 +434,9 @@ class Router implements Serializable
 				$url = $this->setUrlQueryParam($url, $key, $var);
 			}
 		}
-		else if ($this->isHttps())
+		else // if ($this->isHttps())
 		{
-			$url = $this->createFullUrl($url, true);
+			$url = $this->createFullUrl($url, false);
 		}
 
 		if ($addReturnPath && empty($queryVars['return']))
